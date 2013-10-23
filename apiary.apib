@@ -1,30 +1,31 @@
 HOST: http://www.google.com/
 
---- Sample API v2 ---
+--- Fyka test API v1 ---
 ---
+Based on default API template v2
 Welcome to the our sample API documentation. All comments can be written in (support [Markdown](http://daringfireball.net/projects/markdown/syntax) syntax)
 ---
 
 --
-Shopping Cart Resources
-The following is a section of resources related to the shopping cart
+TODO's task Resources
+The following is a section of resources related to the TODO app
 --
-List products added into your shopping-cart. (comment block again in Markdown)
-GET /shopping-cart
+List all tasks within db
+GET /tasks
 < 200
 < Content-Type: application/json
 { "items": [
-{ "url": "/shopping-cart/1", "product":"2ZY48XPZ", "quantity": 1, "name": "New socks", "price": 1.25 }
+{ "url": "/tasks/1", "product":"2ZY48XPZ", "quantity": 1, "name": "New socks", "price": 1.25 }
 ] }
 
 
-Save new products in your shopping cart
-POST /shopping-cart
+Create new task in our TODO app
+POST /tasks
 > Content-Type: application/json
 { "product":"1AB23ORM", "quantity": 2 }
 < 201
 < Content-Type: application/json
-{ "status": "created", "url": "/shopping-cart/2" }
+{ "status": "created", "url": "/tasks/2" }
 
 
 -- Payment Resources --
